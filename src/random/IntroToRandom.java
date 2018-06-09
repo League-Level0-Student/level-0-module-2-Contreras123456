@@ -20,7 +20,7 @@ public class IntroToRandom {
 		//5. Limit the random number between 25 and 75. Hint: ((highest value - lowest value)+1) + lowest value
 		r = random.nextInt(51)-25;
 		//6. Challenge: Limit the random number between -222 and 88
-r = random.nextInt()
+r = random.nextInt();
 		//1. Print out the value of r
 		System.out.println(r);
 		//2. Run the program.  What number appears in the console?

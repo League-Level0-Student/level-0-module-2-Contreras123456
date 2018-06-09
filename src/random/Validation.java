@@ -21,9 +21,11 @@ public class Validation {
 		System.out.println(randomNumber);
 
 		// 3. Use each value of randomNumber to give the user a random compliment.
-
+if(randomNumber==0) {
 		// 4. Repeat all the code above 10 times
-		
+		for(int i=0; i<10; i++) {
 		// 5. Find someone to test out your program. They will like it :)
+	}
+}
 	}
 }
