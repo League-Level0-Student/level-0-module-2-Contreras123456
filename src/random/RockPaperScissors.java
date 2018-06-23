@@ -38,7 +38,7 @@ public class RockPaperScissors extends JPanel implements ActionListener{
 			// Drop the pictures into this package
 			// Replace the names below with your images
 		
-			rockImage = new ImageIcon(getClass().getResource("rock.png"));
+			rockImage = new ImageIcon(getClass().getResource("lol.png"));
 			paperImage = new ImageIcon(getClass().getResource("paper.jpeg"));
 			scissorsImage = new ImageIcon(getClass().getResource("scissors.jpeg"));
 
