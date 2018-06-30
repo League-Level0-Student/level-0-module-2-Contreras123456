@@ -6,6 +6,7 @@ package random;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -38,9 +39,9 @@ public class RockPaperScissors extends JPanel implements ActionListener{
 			// Drop the pictures into this package
 			// Replace the names below with your images
 		
-			rockImage = new ImageIcon(getClass().getResource("lol.png"));
-			paperImage = new ImageIcon(getClass().getResource("paper.jpeg"));
-			scissorsImage = new ImageIcon(getClass().getResource("scissors.jpeg"));
+			rockImage = new ImageIcon(getClass().getResource("smiley.png"));
+			paperImage = new ImageIcon(getClass().getResource("paperio.jpeg"));
+			scissorsImage = new ImageIcon(getClass().getResource("safetyscissors.jpeg"));
 
 		} catch (Exception ex) {
 			JOptionPane.showMessageDialog(null, "Cannot find one or more of your images");
@@ -81,8 +82,8 @@ public class RockPaperScissors extends JPanel implements ActionListener{
         //2. Run the program 4 times. Does the computer always choose the same thing?
 
         //3. Change the value of opponentSelection to be a random number between 0 and 2;
-        int opponentSelection = 0;
-        
+    	Random number = new Random();
+        int opponentSelection = number.nextInt(3);
         //4. Run the program again. Is the result different?
  
         int selection = 0;
