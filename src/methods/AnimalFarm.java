@@ -1,8 +1,8 @@
 package methods;
 
 //Copyright (c) The League of Amazing Programmers 2013-2017
-//Level 0
 
+//Level 0
 
 import java.io.File;
 
@@ -13,51 +13,65 @@ import javax.swing.JOptionPane;
 
 public class AnimalFarm {
 
-AnimalFarm() {
-	/*
-	 * 1. Ask the user which animal they want, then play the sound of that
-	 * animal.
-	 * 
-	 */
+	AnimalFarm() {
+		/*
+		 * 1. Ask the user which animal they want, then play the sound of that animal.
+		 * 
+		 */
+		for (int i = 0; i < 2; i++) {
 
-	/* 2. Make it so that the user can keep entering new animals. */
-}
+		
+		String bigBird = JOptionPane.showInputDialog("What animal do you like?");
+		if (bigBird.equals("cow")) {
+			playMoo();
+		}
+		if (bigBird.equals("duck")) {
+			playQuack();
+		}
 
-void playMoo() {
-	playNoise(mooFile);
-}
+		if (bigBird.equals("dog")) {
+			playWoof();
+		}
+		/* 2. Make it so that the user can keep entering new animals. */
 
-void playQuack() {
-	playNoise(quackFile);
-}
-
-void playWoof() {
-	playNoise(woofFile);
-}
-
-String quackFile = "quack.wav";
-String mooFile = "moo.wav";
-String woofFile = "woof.wav";
-String meowFile = "meow.wav";
-String llamaFile = "llama.wav";
-
-
-/* Ignore this stuff */
-
-public void playNoise(String soundFile) {
-	try {
-		 Clip clip = AudioSystem.getClip();
-		 clip.open(AudioSystem.getAudioInputStream(getClass().getResource(soundFile)));
-		 clip.start();
-		 Thread.sleep(3400);
-	} catch (Exception ex) {
-  	ex.printStackTrace();
+		if (bigBird.equals("cat")) {
+			playNoise(meowFile);
+		}
 	}
-}
+	}
+	void playMoo() {
+		playNoise(mooFile);
+	}
 
-public static void main(String[] args) {
-	new AnimalFarm();
-}
+	void playQuack() {
+		playNoise(quackFile);
+	}
+
+	void playWoof() {
+		playNoise(woofFile);
+	}
+
+	String quackFile = "quack.wav";
+	String mooFile = "moo.wav";
+	String woofFile = "woof.wav";
+	String meowFile = "meow.wav";
+	String llamaFile = "llama.wav";
+
+	/* Ignore this stuff */
+
+	public void playNoise(String soundFile) {
+		try {
+			Clip clip = AudioSystem.getClip();
+			clip.open(AudioSystem.getAudioInputStream(getClass().getResource(soundFile)));
+			clip.start();
+			Thread.sleep(3400);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		new AnimalFarm();
+	}
 
 }
-
